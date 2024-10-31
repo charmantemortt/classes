@@ -6,11 +6,11 @@ class BankAccount:
         self._transaction_history = []
 
     def deposit(self, amount):
-        self._transaction_history.append("Deposit:")
+        self._transaction_history.append(f"Deposit:{amount}",)
         self.balance = amount
 
     def withdraw(self, amount):
-        self._transaction_history.append("Withdraw:")
+        self._transaction_history.append(f"Withdraw: {amount}")
         if amount > 0:
             if amount <= self.balance:
                 self.balance = amount - 50
